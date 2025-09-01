@@ -65,6 +65,35 @@ have been written to show some features of IVRE.
 
 ## Documentation ##
 
+### Usage ###
+#### Initialization ####
+```
+yes | ivre ipinfo --init &&
+yes | ivre scancli --init &&
+yes | ivre view --init &&
+yes | ivre flowcli --init &&
+yes | ivre runscansagentdb --init &&
+ivre ipdata --download &&
+ivre getwebdata
+```
+#### Importing data to DB and WebView ####
+Category and source are Optional
+```
+ivre scan2db -c TestCategory1 -s TestSource1 -r /ivre-share/<path_to>/a.b.c.d.xml
+ivre db2view nmap --category TestCategory1
+```
+
+#### Clearing data from DB and WebView ####
+```
+ivre scancli --init &&
+ivre view --init
+```
+
+
+
+
+
+
 [IVRE's documentation](https://doc.ivre.rocks/) is hosted by Read The
 Docs, based on files from the [doc/](doc/) directory of the
 repository.
